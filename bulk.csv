@@ -1,0 +1,7 @@
+age,sex,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,ca,cp,thal,slope
+63,1,145,233,1,0,150,0,2.3,0,typical_angina,normal,flat
+37,1,130,250,0,1,187,0,3.5,0,asymptomatic,fixed_defect,downsloping
+41,0,120,204,0,0,172,0,1.4,0,non_anginal_pain,normal,upsloping
+56,1,140,236,0,1,178,0,0.8,0,atypical_angina,reversible_defect,flat
+57,0,120,354,0,1,163,1,0.6,0,typical_angina,normal,upsloping
+
