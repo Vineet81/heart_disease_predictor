@@ -1,5 +1,5 @@
 # ❤️ Heart Disease Predictor
-[click Here]9https://heartdiseasepredictor-x4yhu96ffz79trdlzjgjja.streamlit.app/)
+[click Here](https://heartdiseasepredictor-x4yhu96ffz79trdlzjgjja.streamlit.app/)
 A machine learning web app built with **Streamlit** that predicts the likelihood of heart disease using patient data.
 
 ---
