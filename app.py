@@ -35,8 +35,19 @@ model = rf_model if model_choice == "Random Forest" else svm_model
 # Input Function for Single Prediction
 def get_single_input():
     user_data = {}
-    for col in numerical_cols:
-        user_data[col] = st.number_input(f"Enter {col}", value=0.0 if col != 'ca' else 0, format="%f")
+    int_cols = ['ca', 'age']
+binary_cols = ['sex']  # Takes only 0 or 1
+
+for col in numerical_cols:
+    if col in int_cols:
+        user_data[col] = st.number_input(f"Enter {col}", value=0, format="%d")
+    elif col in binary_cols:
+        user_data[col] = st.selectbox(f"Select {col}", options=[0, 1])
+    else:
+        user_data[col] = st.number_input(f"Enter {col}", value=0.0, format="%f")
+
+   # for col in numerical_cols:
+        #user_data[col] = st.number_input(f"Enter {col}", value=0.0 if col != 'ca' else 0, format="%f")
 
     user_data['cp'] = st.selectbox("Chest Pain Type", ["typical_angina", "atypical_angina", "non_anginal_pain", "asymptomatic"])
     user_data['thal'] = st.selectbox("Thalassemia", ["normal", "fixed_defect", "reversible_defect"])
